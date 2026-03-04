@@ -322,8 +322,8 @@
 
         try {
           const apiUrl = 'https://api.telegram.org/bot8719425839:AAEk7JKoaGuXD_wPzefxkVLTM3YLmisgZdA/sendMessage';
-          const corsProxy = 'https://corsproxy.io/?' + encodeURIComponent(apiUrl);
-          const response = await fetch(corsProxy, {
+          
+          const response = await fetch(apiUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -368,3 +368,4 @@
   </script>
 </body>
 </html>
+
