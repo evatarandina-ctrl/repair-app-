@@ -321,7 +321,10 @@
         btnSubmit.textContent = 'Отправка...';
 
         try {
-          const apiUrl = 'https://api.telegram.org/bot8719425839:AAEk7JKoaGuXD_wPzefxkVLTM3YLmisgZdA/sendMessage';
+          const text = encodeURIComponent(message);
+const url = `https://t.me/remont_3gorka_bot?start=${text}`;
+
+window.open(url, '_blank');
           
           const response = await fetch(apiUrl, {
             method: 'POST',
@@ -368,4 +371,5 @@
   </script>
 </body>
 </html>
+
 
